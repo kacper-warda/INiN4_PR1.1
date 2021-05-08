@@ -3,51 +3,35 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        Animal dog = new Animal("canis");
-        dog.name = "Burek";
-        Animal cat = new Animal("feline");
-        cat.name = "Puszek";
-
-        System.out.println("Imie psa = " + dog.name);
-        System.out.println("Imie kota = " + cat.name);
-
-        Phone iphone = new Phone();
-        iphone.producent = "apple";
-        iphone.model = "6s";
-
-        Phone s11 = new Phone();
-        s11.producent = "samsung";
-        s11.model = "S11";
-
-        Phone onePlus = new Phone();
-        s11.producent = "one+";
-        s11.model = "8Pro";
-
-        Human human = new Human();
+        Human human = new Human(1000.0);
         human.firstName = "Piotr";
         human.lastName = "Andrzejewski";
         human.sex = "Male";
         human.age = 33;
 
-        dog.feed();
-        cat.takeForAWalk();
+        human.setPhone(new Phone("samusng", "galaxy", 6.0));
 
-        String version = iphone.getOSVersion();
-        System.out.println(iphone.getOSVersion());
+        System.out.println(human.getPhone().model);
+        System.out.println(human.getPhone());
 
-        Human me = new Human();
-        me.firstName = "Wojtek";
+        Phone iphone = new Phone("apple", "6s", 4.5);
+        human.setPhone(iphone);
 
-        Car toyota = new Car();
-        toyota.producer = "Toyota";
-        toyota.model = "Supra";
-        toyota.productionYear = 1997;
-        toyota.fuelType = "Gasoline";
-        toyota.engineCapacity = 3.0;
-        toyota.enginePower = 342;
+        System.out.println(human.getPhone().model);
+        System.out.println(human.getPhone());
 
-        me.car = toyota;
+        //jak dostać się do samsunga galaxy?
 
+        human.setPhone(new Phone("samsung", "galaxy", 6.0));
 
+        System.out.println(human.getPhone().model);
+        System.out.println(human.getPhone());
+
+        System.out.println(human.getSalary());
+        human.setSalary(2.9);
+        System.out.println(human.getSalary());
+
+        human.setSalary(-123123.2);
+        System.out.println(human.getSalary());
     }
 }

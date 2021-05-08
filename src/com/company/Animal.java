@@ -11,31 +11,18 @@ public class Animal {
     File pic;
     private Double weight;
 
-
-    Animal(String species) {
-
+    public Animal(String species) {
         this.species = species;
-        switch (species) {
-
-            case "Dog": {
-
-                this.weight = DEFAULT_DOG_WEIGHT;
+        switch (this.species) {
+            case "canis":
+                this.weight = 5.0;
                 break;
-
-            }
-
-            case "Cat": {
-
-                this.weight = DEFAULT_CAT_WEIGHT;
+            case "feline":
+                this.weight = 1.0;
                 break;
-
-            }
-
             default:
-
-                this.weight = DEFAULT_ANIMAL_WEIGHT;
+                this.weight = 0.5;
                 break;
-
         }
     }
 

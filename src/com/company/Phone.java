@@ -1,11 +1,16 @@
 package com.company;
 
 public class Phone {
-    String producent;
-    String model;
-    String operationsystem;
-    Double screensize;
+    final String producent;
+    final String model;
+    final Double screenSize;
+    String os;
 
+    public Phone(String producent, String model, Double screenSize) {
+        this.producent = producent;
+        this.model = model;
+        this.screenSize = screenSize;
+    }
 
     String getOSVersion() {
 
