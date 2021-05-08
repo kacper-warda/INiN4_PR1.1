@@ -19,9 +19,13 @@ public class Main {
         s11.producent = "samsung";
         s11.model = "S11";
 
+        Phone onePlus = new Phone();
+        s11.producent = "one+";
+        s11.model = "8Pro";
+
         Human human = new Human();
         human.firstName = "Piotr";
-        human.lastName = "Piszczyglowa";
+        human.lastName = "Andrzejewski";
         human.sex = "Male";
         human.age = 33;
 
@@ -33,13 +37,6 @@ public class Main {
 
         Human me = new Human();
         me.firstName = "Wojtek";
-        me.phone = s11;
-        me.pet = dog;
-        me.pet.feed();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
 
         Car toyota = new Car();
         toyota.producer = "Toyota";
